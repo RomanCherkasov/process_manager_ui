@@ -22,7 +22,7 @@ class ProcessItem extends StatelessWidget {
             IconButton(
               icon: const Icon(Icons.stop),
               onPressed: () {
-                processProvider.stopProcess(process.id);
+                processProvider.confirmStopProcess(context, process.id);
               },
             ),
             IconButton(
