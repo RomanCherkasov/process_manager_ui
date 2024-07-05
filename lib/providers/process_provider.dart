@@ -31,6 +31,37 @@ class ProcessProvider with ChangeNotifier {
     );
   }
 
+  Future<void> confirmStopProcess(BuildContext context, int id) async {
+    bool confirm = await _showConfirmationDialog(context);
+    if (confirm) {
+      await stopProcess(id);
+    }
+  }
+
+  Future<bool> _showConfirmationDialog(BuildContext context) {
+    return showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text('Подтверждение остановки'),
+        content: Text('Вы уверены, что хотите остановить процесс?'),
+        actions: <Widget>[
+          TextButton(
+            child: Text('Отмена'),
+            onPressed: () {
+              Navigator.of(ctx).pop(false);
+            },
+          ),
+          TextButton(
+            child: Text('ОК'),
+            onPressed: () {
+              Navigator.of(ctx).pop(true);
+            },
+          ),
+        ],
+      ),
+    ).then((value) => value ?? false);
+  }
+
   Future<void> fetchProcesses() async {
     _setLoading(true);
     try {
