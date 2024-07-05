@@ -1,6 +1,6 @@
 # Remote Process Manager 
 
-UI for process runner
+UI for [Process Manager Server](https://github.com/RomanCherkasov/process_manager_server)
 
 ## Feature 
 
