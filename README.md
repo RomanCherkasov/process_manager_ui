@@ -1,16 +1,15 @@
-# proc_manager
+# Remote Process Manager 
 
-A new Flutter project.
+UI for process runner
 
-## Getting Started
+## Feature 
 
-This project is a starting point for a Flutter application.
+1. Run process
+2. Stop running process
+3. Rerun failed process
+4. List process
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Plans
+1. UI improvements (error handling, improve UX)
+2. Add command presets
+3. Download presets from remote storage
